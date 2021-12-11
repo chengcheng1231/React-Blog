@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+## 【React】：部落格
+### 以 React 來製作具備看文章、發文、刪文、編輯的部落格系統
+- [網站 Demo](https://chengcheng1231.github.io/React-Blog/#/)
+### 使用技術：
+- 以 React 搭配 React-router 實現 SPA 部落格系統
+- 以 JSX 語法撰寫元件並用 styled-component 切版
+- 支援 RWD
+- useState 管理狀態
+- 使用 Prettier 讓程式碼格式統一
+- 使用偽元素將棋子下在交叉點而非正中央
+- 以 html2canvas 套件去下載棋盤截圖
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+![](https://imgur.com/IrmWVwo)
 
-## Available Scripts
+### 五子棋功能
+- 以二維陣列來存取棋盤
+- 能看到目前的狀態，顯示下個玩家或是遊戲贏家
+- 具有悔棋、取消悔棋的功能
+- 具截圖分享圖片功能
+- 重新開新棋盤
+- 能返回任意步驟的功能，讓玩家能查看歷史紀錄
 
-In the project directory, you can run:
+![](https://imgur.com/1KDYGP5.jpg)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 專案結構
+- /src
+    - /components
+        - App.js
+        - GameBoard.js
+        - Square.js
+    - /pages
+        - App.js
+        - GameBoard.js
+        - Square.js
+    - index.js
+    - index.css
+    - App.css
+    - utills.js: All Utility functions
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### 1. components 放置 styled-component 版面
+#### 2. pages 建構 funciton component 以及觸發事件
