@@ -10,7 +10,8 @@
 - 使用偽元素將棋子下在交叉點而非正中央
 - 以 html2canvas 套件去下載棋盤截圖
 
-![](https://imgur.com/IrmWVwo)
+![image](https://imgur.com/a/4wvfGmX.gif)
+
 
 ### 五子棋功能
 - 以二維陣列來存取棋盤
