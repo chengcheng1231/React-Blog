@@ -3,7 +3,7 @@ import { Ring } from "react-awesome-spinners";
 import { getSinglePost } from "../../WebAPI";
 import { AuthContext } from "../../contexts";
 import { deletePost } from "../../WebAPI";
-import { Link, useParams } from "react-router-dom";
+import { useParams, useHistory } from "react-router-dom";
 import {
   Root,
   PostContainer,
@@ -26,6 +26,7 @@ export default function SinglePage() {
   const [postAuth, setPostAuth] = useState(null);
   const { slug } = useParams();
   const { user } = useContext(AuthContext); // 接收 App.js 傳的 context
+  const history = useHistory();
 
   useEffect(() => {
     getSinglePost(slug).then((posts) => {
@@ -39,7 +40,7 @@ export default function SinglePage() {
   const handleDeletePost = async () => {
     const result = await deletePost(singlePosts.id);
     if (result) {
-      window.location.assign("/");
+      history.push("/");
     }
   };
 
