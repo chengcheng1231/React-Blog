@@ -3,7 +3,7 @@ import avatar from "../Lidemy.png";
 import { useContext } from "react";
 import { AuthContext } from "../../contexts";
 import { setAuthToken, successAlert } from "../../utils";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useHistory } from "react-router-dom";
 
 const Root = styled.div`
   border-bottom: 1.5px solid rgb(228, 225, 225, 0.7);
@@ -95,13 +95,14 @@ const NavbarAvatarImage = styled.div`
 export default function Header() {
   const location = useLocation();
   const { user, setUser } = useContext(AuthContext);
+  const history = useHistory();
 
   const handleLogout = () => {
     setAuthToken("");
     setUser(null);
     successAlert("log out successfully!", "See you soon!", "success");
     if (location.pathname !== "/") {
-      window.location.assign("/");
+      history.push("/");
     }
   };
 
